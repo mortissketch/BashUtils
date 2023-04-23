@@ -1,0 +1,20 @@
+this is the beginning of the file example2.txt 
+999
+888
+777
+666
+5555
+444
+
+333
+
+222
+
+111111
+
+000
+
+hello
+
+previous line is an empty line.
+this is the end of the file example2.txt

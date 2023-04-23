@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+
+
+
+
+
+typedef struct {
+    int b;
+    int n;
+    int t;
+    int e;
+    int s;
+    int v;
+} flag_options;
+int analiz_options(int argc, char *argv[], flag_options* tmp);
+
+void prin(FILE *file, flag_options *f);
+void nonblank(int* line, char *curr_ch, char* priv_ch);
+void number(int* line, char *priv_ch);
+void end(char ch);
+void var(char *curr_ch, int *not_print);
+
+
+
+
+
+int main(int argc, char* argv[]) {
+  int error = 0;
+  if (argc == 1){
+    error = 1;
+  } else {
+    flag_options f = {0};
+    error = analiz_options(argc, argv, &f);
+    if (!error) {
+      int count = 1;
+      while (count < argc) {
+        if (argv[count][0] != '-') {
